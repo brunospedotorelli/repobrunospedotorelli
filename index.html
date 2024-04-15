@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Example</title>
+</head>
+<body>
+    <h1>CRUD Example</h1>
+
+    <!-- Form for creating a new cliente -->
+    <h2>Create Cliente</h2>
+    <form action="process.php" method="post">
+        <label for="nome_cliente">Nome:</label>
+        <input type="text" id="nome_cliente" name="nome_cliente" required>
+        <label for="hash_cliente">Hash:</label>
+        <input type="text" id="hash_cliente" name="hash_cliente" required>
+        <input type="submit" value="Create">
+        <input type="hidden" name="action" value="create">
+    </form>
+
+    <!-- Form for updating an existing cliente -->
+    <h2>Update Cliente</h2>
+    <form action="process.php" method="post">
+        <label for="update_id">Cliente ID:</label>
+        <input type="number" id="update_id" name="update_id" required>
+        <label for="update_nome_cliente">New Name:</label>
+        <input type="text" id="update_nome_cliente" name="update_nome_cliente">
+        <label for="update_hash_cliente">New Hash:</label>
+        <input type="text" id="update_hash_cliente" name="update_hash_cliente">
+        <input type="submit" value="Update">
+        <input type="hidden" name="action" value="update">
+    </form>
+
+    <!-- Form for deleting an existing cliente -->
+    <h2>Delete Cliente</h2>
+    <form action="process.php" method="post">
+        <label for="delete_id">Cliente ID:</label>
+        <input type="number" id="delete_id" name="delete_id" required>
+        <input type="submit" value="Delete">
+        <input type="hidden" name="action" value="delete">
+    </form>
+
+    <!-- PHP will handle the CRUD operations -->
+</body>
+</html>
